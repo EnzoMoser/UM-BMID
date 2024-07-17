@@ -22,14 +22,14 @@ verify_path(__OUTPUT_DIR)
 ###############################################################################
 
 # Define the generation of data
-gen = 'one'
+gen = 'two'
 
 # Define the type of s-params to plot, must be in ['s11', 's21']
 sparam = 's11'
 
 # Define the type of reference calibration performed, must
 # be in ['emp', 'adi']
-cal_type = 'emp'
+cal_type = 'adi'
 
 ###############################################################################
 

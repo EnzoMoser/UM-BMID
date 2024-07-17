@@ -9,7 +9,7 @@ clc;
 %%  Define variables specifying which file to load
 
 % The generation of data to use, must be in ['one', 'two']
-gen = 'one';
+gen = 'two';
 
 % The type of sparams to use, must be in ['s11', 's21']
 sparam = 's11';
@@ -51,12 +51,12 @@ metadata = getfield(metadata, metadataFieldName{1});
 sampleIdx = 1;  % The index for the sample that will be plotted
 
 % Take the abs-value and reshape for imshow
-dataToPlot = squeeze(scanData(sampleIdx, :, :));
-dataToPlot = iczt(dataToPlot, -0.5e-9, 6e-9, 1024, 1e9, 8e9); 
+dataToPlot_squeeze = squeeze(scanData(sampleIdx, :, :));
+dataToPlot = iczt(dataToPlot_squeeze, -0.5e-9, 6e-9, 1024, 1e9, 8e9); 
 
 % Make the figure
 figure;
-imagesc(abs(dataToPlot), 'y', linspace(0, 6, 1024));
+imagesc(abs(dataToPlot), 'YData', linspace(0, 6, 1024));
 title('Sample Sinogram');
 xlabel('Antenna Position');
 ylabel('Time of Response (ns)');
