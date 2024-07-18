@@ -71,11 +71,10 @@ plt.ylabel('Time of Response (ns)')
 plt.yticks(np.round(np.linspace(0, 1024, 10)),
            ['%.2f' % ii for ii in np.linspace(0, 6, 10)])
 plt.colorbar()
-plt.show()
+#plt.show()
 
 # Save the figure, can comment-out to not-save
-# plt.savefig(os.path.join(__OUTPUT_DIR, 'PythonExampleSinogram.png'),
-#             dpi=300)
+plt.savefig(os.path.join(__OUTPUT_DIR, 'PythonExampleSinogram.png'), dpi=300)
 
 ###############################################################################
 
