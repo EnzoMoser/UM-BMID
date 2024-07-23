@@ -4,5 +4,3 @@
 SOURCE_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 export PYTHONPATH=$SOURCE_DIR
-source ../private/um_bmid_python/bin/activate
-alias p=python3
